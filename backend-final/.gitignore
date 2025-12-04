@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Environment
+.venv/
+.env
+
+# Databases
+sql_app.db
+test.db
+
+# VSCode / IDE
+.vscode/
+settings.json
+
+# Others
+*.log
