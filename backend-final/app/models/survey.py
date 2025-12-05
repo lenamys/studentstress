@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, Boolean, String, TIMESTAMP, func
+from sqlalchemy.dialects.postgresql import JSONB
 from .models import Base  
 
 class Survey(Base):
@@ -25,5 +26,8 @@ class Survey(Base):
     peer_pressure = Column(Integer)
     extracurricular_activities = Column(Integer)
     bullying = Column(Integer)
-    prediction_result = Column(String(50))
+    main_prediction_result = Column(String(50))
+    regression_prediction_result = Column(String(50))
+    rf_prediction_result = Column(String(50))
+    prediction_time = Column(JSONB)
     created_at = Column(TIMESTAMP, server_default=func.now())
